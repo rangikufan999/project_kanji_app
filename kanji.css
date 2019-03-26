@@ -1,0 +1,31 @@
+body{
+	background-color:#00ace6;
+}
+
+div{
+	text-align:center;
+}
+
+hr{
+	width:50%;
+}
+
+button{
+	width:200px;
+	height:200px;
+	border:none;
+	border-radius:25px;
+	text-decoration:none;
+	background-color:#0033cc;
+	color:white;
+	font-size:68px;
+}
+
+button:hover{
+	background-color:#668cff;
+}
+
+#currentScore, #maxScore, #kanjiDefinition{
+	font-size:36px;
+	font-weight:bold;
+}

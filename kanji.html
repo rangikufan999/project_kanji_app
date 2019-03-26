@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+       	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kanji</title>
+        <script src="kanjiDatabase.js"></script>
+        <script src="kanji.js"></script>
+        <link href="kanji.css" rel="stylesheet">
+    <body>
+    	<div>
+    		<h1>Kanji Flashcard Program</h1><br/>
+    		<hr/>
+    		<button id="startQuiz" onclick="startQuiz()">Start Quiz</button>
+            <br/><br/><br/>
+    		<div class="input">
+    			<button id="answer1" onclick="nextQuestion(this)"></button>
+    			<button id="answer2" onclick="nextQuestion(this)"></button>
+    			<button id="answer3" onclick="nextQuestion(this)"></button>
+    			<button id="answer4" onclick="nextQuestion(this)"></button>
+    			<button id="answer5" onclick="nextQuestion(this)"></button>
+    		</div>
+    		<div class="query">
+    			<h1 id="kanjiQuery"></h1>
+    			<br/>
+    			<p id="kanjiDefinition"></p>
+    		</div>
+    		<br/>
+            <div>
+                <span id="rightOrWrong"></span>
+            </div>
+    		<div class="quizResults">
+    			<span id="currentScore">0</span><span> / </span><span id="maxScore">10</span>
+    		</div>
+    	</div>
+    </body>
+</html>
