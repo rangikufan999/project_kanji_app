@@ -29,6 +29,7 @@ function startQuiz(){
 
 }
 
+//This function populates an array of quiz questions created from the kanjiLibrary
 function createQuizQuestions(){
 	var returnArray = [];
 
@@ -40,6 +41,7 @@ function createQuizQuestions(){
 	return returnArray;
 }
 
+//Fills up the answer elements in the web page with potential answers.
 function fillAnswers(ans){
 	var ans1 = document.getElementById("answer1");
 	var ans2 = document.getElementById("answer2");
@@ -54,6 +56,7 @@ function fillAnswers(ans){
 	ans5.innerHTML = ans[4].kanji;
 }
 
+//Checks a selected element to see if is the correct answer or not.
 function checkAnswer(elem){
 	if(elem.innerHTML == quiz[quizInd].kanji){
 		document.getElementById("rightOrWrong").innerHTML = "CORRECT!";
@@ -64,12 +67,15 @@ function checkAnswer(elem){
 	}
 }
 
+//Updates score on the screen according to quizCurrentScore.
 function updateScore(){
 	var scr = document.getElementById("currentScore");
 
 	scr.innerHTML = quizCurrentScore;
 }
 
+
+//Cycles to the next question in the quiz list, or ends the quiz if it is finished.
 function nextQuestion(elem){
 	checkAnswer(elem);
 	quizInd += 1;
@@ -84,6 +90,7 @@ function nextQuestion(elem){
 }
 
 //Utility
+//Populates an array of answers to be checked against during the quiz.
 function createAnswers(quizArr, quizInd){
 	ansArr = quizArr.slice();
 
@@ -100,6 +107,7 @@ function createAnswers(quizArr, quizInd){
 	return ansArr;
 }
 
+//Shuffles the designated Array
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
