@@ -1,3 +1,5 @@
+//kanjiLibrary database that contains all the Kanji currently in the application.
+//[Future Update] -- Connect to an API with Kanji Data for easier implementation.
 var kanjiLibrary = {
 	"中":{
 		"kanji": "中",
