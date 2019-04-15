@@ -1,31 +1,135 @@
-body{
-	background-color:#00ace6;
+@media screen and (max-width:600px){
+	body{
+		background-color:#00ace6;
+	}
+	div{
+		text-align:center;
+	}
+
+	hr{
+		width:50%;
+	}
+
+	button{
+		width:100px;
+		height:100px;
+		border:none;
+		border-radius:25px;
+		text-decoration:none;
+		background-color:#0033cc;
+		color:white;
+		font-size:28px;
+		margin:3px;
+	}
+
+	button:hover{
+		background-color:#668cff;
+	}
+
+	#currentScore, #maxScore, #kanjiDefinition{
+		font-size:21px;
+		font-weight:bold;
+	}
 }
 
-div{
-	text-align:center;
+@media screen and (min-width:601px) and (max-width:900px){
+	body{
+		background-color:#00ace6;
+	}
+
+	div{
+		text-align:center;
+	}
+
+	hr{
+		width:50%;
+	}
+
+	button{
+		width:150px;
+		height:150px;
+		border:none;
+		border-radius:25px;
+		text-decoration:none;
+		background-color:#0033cc;
+		color:white;
+		font-size:45px;
+	}
+
+	button:hover{
+		background-color:#668cff;
+	}
+
+	#currentScore, #maxScore, #kanjiDefinition{
+		font-size:28px;
+		font-weight:bold;
+	}
 }
 
-hr{
-	width:50%;
+@media screen and (min-width: 901px){
+	body{
+		background-color:#00ace6;
+	}
+
+	div{
+		text-align:center;
+	}
+
+	hr{
+		width:50%;
+	}
+
+	button{
+		width:200px;
+		height:200px;
+		border:none;
+		border-radius:25px;
+		text-decoration:none;
+		background-color:#0033cc;
+		color:white;
+		font-size:68px;
+	}
+
+	button:hover{
+		background-color:#668cff;
+	}
+
+	#currentScore, #maxScore, #kanjiDefinition{
+		font-size:36px;
+		font-weight:bold;
+	}	
 }
 
-button{
-	width:200px;
-	height:200px;
-	border:none;
-	border-radius:25px;
-	text-decoration:none;
-	background-color:#0033cc;
-	color:white;
-	font-size:68px;
-}
+@media screen and (min-width:3000px){
+	body{
+		background-color:#00ace6;
+	}
 
-button:hover{
-	background-color:#668cff;
-}
+	div{
+		text-align:center;
+	}
 
-#currentScore, #maxScore, #kanjiDefinition{
-	font-size:36px;
-	font-weight:bold;
+	hr{
+		width:50%;
+	}
+
+	button{
+		width:350px;
+		height:350px;
+		border:none;
+		border-radius:25px;
+		text-decoration:none;
+		background-color:#0033cc;
+		color:white;
+		font-size:84px;
+	}
+
+	button:hover{
+		background-color:#668cff;
+	}
+
+	#currentScore, #maxScore, #kanjiDefinition{
+		font-size:72px;
+		font-weight:bold;
+	}	
 }

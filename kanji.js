@@ -1,7 +1,7 @@
 //Global variables needed at start of quiz
 var quizIndex = 0;
 var quizCurrentScore = 0;
-var quizSize = 10;
+var quizSize = 28;
 var quiz = "";
 var quizInd = 0;
 
@@ -29,7 +29,6 @@ function startQuiz(){
 
 }
 
-//This function populates an array of quiz questions created from the kanjiLibrary
 function createQuizQuestions(){
 	var returnArray = [];
 
@@ -41,7 +40,6 @@ function createQuizQuestions(){
 	return returnArray;
 }
 
-//Fills up the answer elements in the web page with potential answers.
 function fillAnswers(ans){
 	var ans1 = document.getElementById("answer1");
 	var ans2 = document.getElementById("answer2");
@@ -56,7 +54,6 @@ function fillAnswers(ans){
 	ans5.innerHTML = ans[4].kanji;
 }
 
-//Checks a selected element to see if is the correct answer or not.
 function checkAnswer(elem){
 	if(elem.innerHTML == quiz[quizInd].kanji){
 		document.getElementById("rightOrWrong").innerHTML = "CORRECT!";
@@ -67,47 +64,47 @@ function checkAnswer(elem){
 	}
 }
 
-//Updates score on the screen according to quizCurrentScore.
 function updateScore(){
 	var scr = document.getElementById("currentScore");
+	var scrMax = document.getElementById("maxScore");
 
 	scr.innerHTML = quizCurrentScore;
+	scrMax.innerHTML = quizSize;
 }
 
-
-//Cycles to the next question in the quiz list, or ends the quiz if it is finished.
 function nextQuestion(elem){
 	checkAnswer(elem);
 	quizInd += 1;
-	if(quizInd < 10){
+	if(quizInd < quizSize){
 		var answers = createAnswers(quiz, quizInd);
 		var queryHeader = document.getElementById("kanjiQuery");
 		fillAnswers(answers);
 		queryHeader.innerHTML = quiz[quizInd].kanjiDef;
-	}else if(quizInd >= 10){
+	}else if(quizInd >= quizSize){
 		document.getElementById("rightOrWrong").innerHTML = "The quiz is finished. Click Start Quiz to retake the quiz.";
 	}
 }
 
 //Utility
-//Populates an array of answers to be checked against during the quiz.
 function createAnswers(quizArr, quizInd){
 	ansArr = quizArr.slice();
+	var popSize = quizSize - 5;
+
 
 	ansArr.splice(quizInd, 1);
 	shuffle(ansArr);
 
-	for(var i = 0;i<5;i++){
+	for(var i = 0;i<popSize;i++){
 		ansArr.pop();
 	}
 
 	ansArr.push(quizArr[quizInd]);
 	shuffle(ansArr);
 
+	console.log(ansArr);
 	return ansArr;
 }
 
-//Shuffles the designated Array
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
